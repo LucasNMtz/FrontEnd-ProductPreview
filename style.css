@@ -1,0 +1,147 @@
+:root{
+    /* ## Colors
+    ### Primary */
+    --Dark-cyan: hsl(158, 36%, 37%);
+    --Btn-hover: hsl(159, 22%, 20%);
+    --Cream: hsl(30, 38%, 92%);
+    /* ### Neutral */
+    --Very-dark-blue: hsl(212, 21%, 14%);
+    --Dark-grayish-blue: hsl(228, 12%, 48%);
+    --White: hsl(0, 0%, 100%);
+}
+
+body
+{
+    font-size: 14px;
+    background-color: var(--Cream);
+    font-family: 'Montserrat', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 8rem;
+}
+
+main{
+    background-color: var(--White);
+    width: 90%;
+    max-width: 800px;
+    border-radius: 10px;
+}
+
+.main__figure{
+    background-image: url(images/image-product-mobile.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    width: 100%;
+    height: 300px;
+    border-radius: 10px 10px 0 0;
+}
+
+.main__text-container{
+    padding: 2.05rem;
+}
+
+h2, p, .prev-price-span{
+    color: var(--Dark-grayish-blue);
+    font-weight: 500;
+}
+
+h2{
+    letter-spacing: 0.35rem;
+    font-size: 0.95em;
+    text-transform: uppercase;
+}
+
+h1, .price-span{
+    font-family: 'Fraunces', serif;
+    font-weight: 700;
+    font-size: 2.5em;
+}
+
+h1{
+    color: var(--Very-dark-blue);
+    margin: 2rem 0;
+}
+
+p{
+    font-size: 1.25em;
+    line-height: 1.5;
+    margin-bottom: 2rem;
+}
+
+.price-container{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin: 1.5rem 0;
+}
+
+.price-span{
+    color: var(--Dark-cyan);
+}
+
+.prev-price-span{
+    text-decoration: line-through;
+    font-size: 1em;
+}
+
+button{
+    background-color: var(--Dark-cyan);
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    width: 100%;
+    padding: 1.3rem 0.5rem;
+    font-weight: 700;
+    color: var(--White);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 1s;
+}
+
+.cart-icon{
+    margin-right: 0.5rem;
+}
+
+button:hover{
+    background-color: var(--Btn-hover);
+    filter: brightness(1.1);
+}
+
+footer{ margin-top: 6.5rem; }
+.attribution { font-size: 11px; text-align: center; font-weight: 500; color: var(--Dark-grayish-blue); font-weight: 500; }
+.attribution a { color: hsl(228, 45%, 44%); font-size: 14px; text-decoration: none; }
+.attribution a:hover { text-decoration: underline; color: var(--Dark-cyan);}
+
+@media only screen and (min-width: 880px){
+    body{
+        padding-top: 9rem;
+    }
+
+    main{
+        display: flex;
+    }
+
+    .main__figure{
+        background-image: url(images/image-product-desktop.jpg);
+        width: 50%;
+        height: auto;
+        border-radius: 10px 0 0 10px;
+    }
+
+    .main__text-container{
+        width: 50%;
+        padding: 3rem;
+    }
+
+    h1{
+        max-width: 260px;
+    }
+
+    footer{
+        margin-top: 8.5rem;
+    }
+}
